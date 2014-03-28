@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cita.irrigationsystem.irrigationsystem.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <fragment class="com.cita.irrigationsystem.irrigationsystem.StartFragment"
+        android:id="@+id/startFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_start" />
+
+    <fragment class="com.cita.irrigationsystem.irrigationsystem.ClimateInfoFragment"
+        android:id="@+id/climateInfoFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        tools:layout="@layout/fragment_climate_info"
+        android:layout_below="@id/startFragment" />
+
+</RelativeLayout>

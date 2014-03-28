@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Irrigation System Test</string>
+
+    <!-- Generic Strings -->
+    <string name="name">Nombre:</string>
+    <string name="description">Descripción:</string>
+    <string name="localization">Localización:</string>
+    <string name="state">Estado:</string>
+    <string name="action_settings">Settings</string>
+    <string name="stateOnText">Activado</string>
+    <string name="stateOffText">Desactivado</string>
+    <string name="humidity">Humedad</string>
+    <string name="temperature">Temperatura</string>
+    <string name="windSpeed">Velocidad del Viento</string>
+    <string name="solarRadiation">Radiación Solar</string>
+
+    <!-- Main Activity -->
+    <!-- Start Fragment -->
+    <string name="homeTV">Inicio</string>
+    <string name="areaNameText">Area_Name</string>
+    <string name="areaDescText">Area_Description</string>
+    <string name="areaLocText">Area_Localization</string>
+    <string name="seeOnMap">Ver en mapa</string>
+    <!-- Climate Info Fragment -->
+    <string name="climaticInfoTV">Información Climática</string>
+    <string name="climaticInfoNameText">Climatic_Info_Name</string>
+    <string name="humidityLevel">--.- %</string>
+    <string name="temperatureLevel">-- º</string>
+    <string name="windSpeedLevel">-- Km/h</string>
+    <string name="solarRadiationLevel">--</string>
+
+    <!-- Crop Activity -->
+    <string name="title_activity_crop">Crops</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
