@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -21,7 +23,7 @@ import android.widget.RelativeLayout;
  * create an instance of this fragment.
  *
  */
-public class ClimateInfoFragment extends Fragment {
+public class ClimateInfoFragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,6 +34,25 @@ public class ClimateInfoFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private String[] texts = {
+            getString(R.string.humidity),
+            getString(R.string.temperature),
+            getString(R.string.windSpeed),
+            getString(R.string.solarRadiation)
+    };
+    private String[] values = {
+            getString(R.string.humidityLevel),
+            getString(R.string.temperatureLevel),
+            getString(R.string.windSpeedLevel),
+            getString(R.string.solarRadiationLevel)
+    };
+    private int[] imgIds = {
+            R.drawable.img_humidity,
+            R.drawable.img_temperature,
+            R.drawable.img_wind_speed,
+            R.drawable.img_radiation
+    };
 
     /**
      * Use this factory method to create a new instance of
@@ -61,16 +82,19 @@ public class ClimateInfoFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-        //TODO: Finish implementing the gridView
-        GridView gridView = (GridView) getView().findViewById(R.id.variablesGL);
-        gridView.setAdapter(new ArrayAdapter<RelativeLayout>());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ClimaticData climaticData = new ClimaticData(getActivity().getBaseContext(), texts, values, imgIds);
+
+        View rootView = inflater.inflate(R.layout.fragment_climate_info, container, false);
+
+        GridView grid = (GridView) rootView.findViewById(R.id.climaticInfoGV);
+        grid.setAdapter(climaticData);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_climate_info, container, false);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
