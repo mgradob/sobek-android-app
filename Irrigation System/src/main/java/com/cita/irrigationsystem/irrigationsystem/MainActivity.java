@@ -9,24 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 
-public class MainActivity extends Activity implements ClimateInfoFragment.OnFragmentInteractionListener, StartFragment.OnFragmentInteractionListener{
+public class MainActivity extends Activity implements ClimateInfoFragment.OnFragmentInteractionListener,
+        StartFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (savedInstanceState == null) {
-        }
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -44,24 +41,15 @@ public class MainActivity extends Activity implements ClimateInfoFragment.OnFrag
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onClimateFragmentInteraction(Uri uri) {
 
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
+    @Override
+    public void onStartFragmentInteraction(Uri uri) {
 
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_start, container, false);
-            return rootView;
-        }
     }
 }

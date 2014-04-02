@@ -56,9 +56,9 @@ public class ClimaticData extends BaseAdapter {
             TextView val = (TextView) grid.findViewById(R.id.grid_value);
             TextView txt = (TextView) grid.findViewById(R.id.grid_text);
 
-            img.setImageResource(imageId[i]);
-            val.setText(value[i]);
-            txt.setText(text[i]);
+            img.setImageResource(R.drawable.ic_launcher);
+            val.setText("hellow");
+            txt.setText("sup");
         } else {
             grid = (View) view;
         }

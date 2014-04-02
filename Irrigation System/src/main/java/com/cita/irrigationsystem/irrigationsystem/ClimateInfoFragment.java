@@ -7,11 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.RelativeLayout;
-
-import java.util.ArrayList;
 
 
 /**
@@ -35,24 +31,7 @@ public class ClimateInfoFragment extends Fragment{
 
     private OnFragmentInteractionListener mListener;
 
-    private String[] texts = {
-            getString(R.string.humidity),
-            getString(R.string.temperature),
-            getString(R.string.windSpeed),
-            getString(R.string.solarRadiation)
-    };
-    private String[] values = {
-            getString(R.string.humidityLevel),
-            getString(R.string.temperatureLevel),
-            getString(R.string.windSpeedLevel),
-            getString(R.string.solarRadiationLevel)
-    };
-    private int[] imgIds = {
-            R.drawable.img_humidity,
-            R.drawable.img_temperature,
-            R.drawable.img_wind_speed,
-            R.drawable.img_radiation
-    };
+
 
     /**
      * Use this factory method to create a new instance of
@@ -86,11 +65,32 @@ public class ClimateInfoFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        String[] texts = {
+                getString(R.string.humidity),
+                getString(R.string.temperature),
+                getString(R.string.windSpeed),
+                getString(R.string.solarRadiation)
+        };
+        String[] values = {
+                getString(R.string.humidityLevel),
+                getString(R.string.temperatureLevel),
+                getString(R.string.windSpeedLevel),
+                getString(R.string.solarRadiationLevel)
+        };
+        int[] imgIds = {
+                R.drawable.img_humidity,
+                R.drawable.img_temperature,
+                R.drawable.img_wind_speed,
+                R.drawable.img_radiation
+        };
+
         ClimaticData climaticData = new ClimaticData(getActivity().getBaseContext(), texts, values, imgIds);
 
         View rootView = inflater.inflate(R.layout.fragment_climate_info, container, false);
 
         GridView grid = (GridView) rootView.findViewById(R.id.climaticInfoGV);
+
         grid.setAdapter(climaticData);
 
         // Inflate the layout for this fragment
@@ -100,7 +100,7 @@ public class ClimateInfoFragment extends Fragment{
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onClimateFragmentInteraction(uri);
         }
     }
 
@@ -133,7 +133,7 @@ public class ClimateInfoFragment extends Fragment{
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        public void onClimateFragmentInteraction(Uri uri);
     }
 
 }

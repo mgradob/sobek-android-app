@@ -75,7 +75,7 @@ public class StartFragment extends Fragment {
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onStartFragmentInteraction(uri);
         }
     }
 
@@ -111,7 +111,7 @@ public class StartFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        public void onStartFragmentInteraction(Uri uri);
     }
 
 }

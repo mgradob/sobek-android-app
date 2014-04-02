@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Irrigation System/Irrigation System.iml" filepath="$PROJECT_DIR$/Irrigation System/Irrigation System.iml" />
       <module fileurl="file://$PROJECT_DIR$/IrrigationSystem.iml" filepath="$PROJECT_DIR$/IrrigationSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sobek-android-app.iml" filepath="$PROJECT_DIR$/sobek-android-app.iml" />
     </modules>
   </component>
 </project>
