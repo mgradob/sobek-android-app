@@ -18,7 +18,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.cita.irrigationsystem.irrigationsystem.ClimateInformationFragment"
+        android:name="com.cita.irrigationsystem.irrigationsystem.WeatherInformationFragment"
         android:id="@+id/weather_information_fragment"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"

@@ -1,5 +1,8 @@
 package com.cita.irrigationsystem.irrigationsystem.dummy;
 
+import com.cita.irrigationsystem.irrigationsystem.R;
+import com.cita.irrigationsystem.irrigationsystem.models.WeatherInformation;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +11,7 @@ import java.util.Map;
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
- * <p>
+ * <p/>
  * TODO: Replace all uses of this class before publishing your app.
  */
 public class DummyContent {
@@ -52,4 +55,36 @@ public class DummyContent {
             return content;
         }
     }
+
+    public static ArrayList<WeatherInformation> WEATHERINFO = new ArrayList<WeatherInformation>();
+
+
+    static {
+
+        WEATHERINFO.add(new WeatherInformation("Hello", "Test", R.drawable.img_humidity));
+        WEATHERINFO.add(new WeatherInformation("Hello", "Test", R.drawable.img_temperature));
+        WEATHERINFO.add(new WeatherInformation("Hello", "Test", R.drawable.img_wind_speed));
+        WEATHERINFO.add(new WeatherInformation("Hello", "Test", R.drawable.img_radiation));
+
+    }
+
+//    String[] texts = {
+//getString(R.string.humidity),
+//    getString(R.string.temperature),
+//    getString(R.string.windSpeed),
+//    getString(R.string.solarRadiation)
+//};
+//String[] values = {
+//        getString(R.string.humidityLevel),
+//        getString(R.string.temperatureLevel),
+//        getString(R.string.windSpeedLevel),
+//        getString(R.string.solarRadiationLevel)
+//        };
+//        int[] imgIds = {
+//        R.drawable.img_humidity,
+//        R.drawable.img_temperature,
+//        R.drawable.img_wind_speed,
+//        R.drawable.img_radiation
+//        };
+
 }

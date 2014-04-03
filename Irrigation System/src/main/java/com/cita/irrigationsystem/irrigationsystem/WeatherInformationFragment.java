@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import com.cita.irrigationsystem.irrigationsystem.adapters.WeatherInformationAdapter;
 import com.cita.irrigationsystem.irrigationsystem.dummy.DummyContent;
 
 /**
@@ -23,7 +22,7 @@ import com.cita.irrigationsystem.irrigationsystem.dummy.DummyContent;
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
-public class ClimateInformationFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class WeatherInformationFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,11 +44,11 @@ public class ClimateInformationFragment extends Fragment implements AbsListView.
      * The Adapter which will be used to populate the ListView/GridView with
      * Views.
      */
-    private ListAdapter mAdapter;
+    private WeatherInformationAdapter mAdapter;
 
     // TODO: Rename and change types of parameters
-    public static ClimateInformationFragment newInstance(String param1, String param2) {
-        ClimateInformationFragment fragment = new ClimateInformationFragment();
+    public static WeatherInformationFragment newInstance(String param1, String param2) {
+        WeatherInformationFragment fragment = new WeatherInformationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,7 +60,7 @@ public class ClimateInformationFragment extends Fragment implements AbsListView.
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ClimateInformationFragment() {
+    public WeatherInformationFragment() {
     }
 
     @Override
@@ -73,9 +72,10 @@ public class ClimateInformationFragment extends Fragment implements AbsListView.
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        // TODO: Change Adapter to display your content
-        mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
+//        // TODO: Change Adapter to display your content
+//        mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+//                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
+        mAdapter = new WeatherInformationAdapter(getActivity());
     }
 
     @Override
@@ -85,7 +85,7 @@ public class ClimateInformationFragment extends Fragment implements AbsListView.
 
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);
-        ((AdapterView<ListAdapter>) mListView).setAdapter(mAdapter);
+        mListView.setAdapter(mAdapter);
 
         // Set OnItemClickListener so we can be notified on item clicks
         mListView.setOnItemClickListener(this);

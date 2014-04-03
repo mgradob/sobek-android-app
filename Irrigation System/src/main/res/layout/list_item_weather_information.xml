@@ -5,24 +5,24 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/grid_image"
+        android:id="@+id/weather_icon"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/grid_value"
+        android:id="@+id/weather_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/grid_image"
+        android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/mainTextsFont"/>
 
     <TextView
-        android:id="@+id/grid_text"
+        android:id="@+id/weather_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/grid_value"
+        android:layout_below="@+id/weather_value"
         android:layout_centerHorizontal="true"
         android:textAppearance="@style/mainFieldsFont"/>
 

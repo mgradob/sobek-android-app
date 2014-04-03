@@ -7,13 +7,13 @@ package com.cita.irrigationsystem.irrigationsystem.models;
  * Class used as a model for the main screen icons
  *
  */
-public class ClimaticData {
+public class WeatherInformation {
 
     private String text;
     private String value;
     private int imgResource;
 
-    public ClimaticData(String text, String value, int imgResource) {
+    public WeatherInformation(String text, String value, int imgResource) {
         this.text = text;
         this.value = value;
         this.imgResource = imgResource;
@@ -45,7 +45,7 @@ public class ClimaticData {
 
     @Override
     public String toString() {
-        return "ClimaticData{" +
+        return "WeatherInformation{" +
                 "text='" + text + '\'' +
                 ", value='" + value + '\'' +
                 ", imgResource=" + imgResource +

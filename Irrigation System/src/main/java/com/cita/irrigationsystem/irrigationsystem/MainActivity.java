@@ -8,7 +8,7 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends Activity implements
-        StartFragment.OnFragmentInteractionListener, ClimateInformationFragment.OnFragmentInteractionListener {
+        StartFragment.OnFragmentInteractionListener, WeatherInformationFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
