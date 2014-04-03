@@ -1,18 +1,14 @@
 package com.cita.irrigationsystem.irrigationsystem;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 
-public class MainActivity extends Activity implements ClimateInfoFragment.OnFragmentInteractionListener,
-        StartFragment.OnFragmentInteractionListener {
+public class MainActivity extends Activity implements
+        StartFragment.OnFragmentInteractionListener, ClimateInformationFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +37,13 @@ public class MainActivity extends Activity implements ClimateInfoFragment.OnFrag
         return super.onOptionsItemSelected(item);
     }
 
-
-
     @Override
-    public void onClimateFragmentInteraction(Uri uri) {
+    public void onStartFragmentInteraction(Uri uri) {
 
     }
 
     @Override
-    public void onStartFragmentInteraction(Uri uri) {
+    public void onFragmentInteraction(String id) {
 
     }
 }

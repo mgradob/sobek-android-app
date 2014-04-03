@@ -1,18 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingTop="15dp"
-    android:background="#CCCCCC"
-    tools:context="com.cita.irrigationsystem.irrigationsystem.MainActivity$PlaceholderFragment">
+    tools:context="com.cita.irrigationsystem.irrigationsystem.ClimateInformationFragment">
 
     <TextView
         android:id="@+id/climaticInfoTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/climaticInfoTV"
-        android:textAppearance="@style/mainSubtitlesFont"/>
+        android:textAppearance="@style/mainSubtitlesFont" />
 
     <TextView
         android:id="@+id/nameTV"
@@ -20,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textAppearance="@style/mainFieldsFont"
-        android:layout_below="@+id/climaticInfoTV"/>
+        android:layout_below="@+id/climaticInfoTV" />
 
     <TextView
         android:id="@+id/nameTextTV"
@@ -30,7 +28,7 @@
         android:textAppearance="@style/mainTextsFont"
         android:layout_below="@+id/climaticInfoTV"
         android:layout_toEndOf="@id/nameTV"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp" />
 
     <TextView
         android:id="@+id/stateTV"
@@ -38,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="@string/state"
         android:textAppearance="@style/mainFieldsFont"
-        android:layout_below="@+id/nameTV"/>
+        android:layout_below="@+id/nameTV" />
 
     <TextView
         android:id="@+id/stateTextTV"
@@ -48,16 +46,23 @@
         android:textAppearance="@style/mainTextsFont"
         android:layout_below="@+id/nameTextTV"
         android:layout_toEndOf="@id/stateTV"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp" />
 
-    <GridView
-        android:id="@+id/climaticInfoGV"
+    <ListView
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/stateTV"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth">
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/stateTV" />
 
-    </GridView>
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/stateTV" />
 
 </RelativeLayout>
