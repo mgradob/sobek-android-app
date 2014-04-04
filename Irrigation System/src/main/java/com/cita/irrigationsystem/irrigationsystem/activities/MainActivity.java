@@ -1,10 +1,14 @@
-package com.cita.irrigationsystem.irrigationsystem;
+package com.cita.irrigationsystem.irrigationsystem.activities;
 
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.cita.irrigationsystem.irrigationsystem.R;
+import com.cita.irrigationsystem.irrigationsystem.StartFragment;
+import com.cita.irrigationsystem.irrigationsystem.WeatherInformationFragment;
 
 
 public class MainActivity extends Activity implements
