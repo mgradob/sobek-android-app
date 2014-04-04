@@ -5,21 +5,42 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.cita.irrigationsystem.irrigationsystem.JsonSpiceService;
 import com.cita.irrigationsystem.irrigationsystem.R;
 import com.cita.irrigationsystem.irrigationsystem.StartFragment;
 import com.cita.irrigationsystem.irrigationsystem.WeatherInformationFragment;
+import com.cita.irrigationsystem.irrigationsystem.lists.CropList;
+import com.octo.android.robospice.SpiceManager;
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
 
 
 public class MainActivity extends Activity implements
         StartFragment.OnFragmentInteractionListener, WeatherInformationFragment.OnFragmentInteractionListener {
 
+    protected SpiceManager spiceManager = new SpiceManager(JsonSpiceService.class);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        spiceManager.start(this);
     }
 
+    @Override
+    protected void onPause() {
+        spiceManager.shouldStop();
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        spiceManager.shouldStop();
+        super.onStop();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,5 +70,26 @@ public class MainActivity extends Activity implements
     @Override
     public void onFragmentInteraction(String id) {
 
+    }
+
+    private void performRequest(String areas){
+        MainActivity.this.setProgressBarIndeterminateVisibility(true);
+
+
+    }
+
+    /**
+     * Inner class for updating ui with data received from the API.
+     */
+    public class CropListRequestListener implements RequestListener<CropList> {
+        @Override
+        public void onRequestFailure(SpiceException e) {
+            Toast.makeText(MainActivity.this, "Failed to fetch crops", Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void onRequestSuccess(CropList cropInformations) {
+            Toast.makeText(MainActivity.this, "Succeded to fetch crops", Toast.LENGTH_LONG).show();
+        }
     }
 }

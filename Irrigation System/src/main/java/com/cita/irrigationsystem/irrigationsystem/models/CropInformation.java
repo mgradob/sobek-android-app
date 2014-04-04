@@ -1,72 +1,53 @@
 package com.cita.irrigationsystem.irrigationsystem.models;
 
 /**
- * Created by mgradob on 4/3/14.
+ * Created by mgradob on 4/4/14.
  */
 public class CropInformation {
+    private int Crop_ID;
+    private String Crop_Name;
+    private String Crop_Desc;
+    private int Crop_EV;
 
-    private int field_id;
-    private String field_name;
-    private String field_desc;
-    private float field_lat;
-    private float field_long;
-
-    public CropInformation(int id, String name, String desc, float lat, float lng) {
-        this.field_id = id;
-        this.field_name = name;
-        this.field_desc = desc;
-        this.field_lat = lat;
-        this.field_long = lng;
+    public int getCrop_ID() {
+        return Crop_ID;
     }
 
-    public int getField_id() {
-        return field_id;
+    public void setCrop_ID(int crop_ID) {
+        Crop_ID = crop_ID;
     }
 
-    public void setField_id(int field_id) {
-        this.field_id = field_id;
+    public String getCrop_Name() {
+        return Crop_Name;
     }
 
-    public String getField_name() {
-        return field_name;
+    public void setCrop_Name(String crop_Name) {
+        Crop_Name = crop_Name;
     }
 
-    public void setField_name(String field_name) {
-        this.field_name = field_name;
+    public String getCrop_Desc() {
+        return Crop_Desc;
     }
 
-    public String getField_desc() {
-        return field_desc;
+    public void setCrop_Desc(String crop_Desc) {
+        Crop_Desc = crop_Desc;
     }
 
-    public void setField_desc(String field_desc) {
-        this.field_desc = field_desc;
+    public int getCrop_EV() {
+        return Crop_EV;
     }
 
-    public float getField_lat() {
-        return field_lat;
-    }
-
-    public void setField_lat(float field_lat) {
-        this.field_lat = field_lat;
-    }
-
-    public float getField_long() {
-        return field_long;
-    }
-
-    public void setField_long(float field_long) {
-        this.field_long = field_long;
+    public void setCrop_EV(int crop_EV) {
+        Crop_EV = crop_EV;
     }
 
     @Override
     public String toString() {
         return "CropInformation{" +
-                "field_id=" + field_id +
-                ", field_name='" + field_name + '\'' +
-                ", field_desc='" + field_desc + '\'' +
-                ", field_lat=" + field_lat +
-                ", field_long=" + field_long +
+                "Crop_ID=" + Crop_ID +
+                ", Crop_Name='" + Crop_Name + '\'' +
+                ", Crop_Desc='" + Crop_Desc + '\'' +
+                ", Crop_EV=" + Crop_EV +
                 '}';
     }
 }

@@ -21,6 +21,9 @@
         <service
             android:name="com.octo.android.robospice.JacksonSpringAndroidSpiceService"
             android:exported="false"/>
+        <service
+            android:name=".JsonSpiceService"
+            android:exported="false"/>
 
     </application>
 
