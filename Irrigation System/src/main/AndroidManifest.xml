@@ -2,14 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cita.irrigationsystem.irrigationsystem" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.cita.irrigationsystem.irrigationsystem.activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <service
-            android:name="com.octo.android.robospice.JacksonSpringAndroidSpiceService"
-            android:exported="false"/>
-        <service
-            android:name=".JsonSpiceService"
-            android:exported="false"/>
-
+        <activity
+            android:name="com.cita.irrigationsystem.irrigationsystem.activities.AreasActivitiy"
+            android:label="@string/title_activity_areas_activitiy"
+            android:parentActivityName="com.cita.irrigationsystem.irrigationsystem.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
     </application>
 
 </manifest>

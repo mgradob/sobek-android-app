@@ -5,31 +5,27 @@
     </style>
 
     <!-- Styles for the main activity -->
-    <style name="mainTitlesFont">
-        <item name="android:textSize">55sp</item>
-        <item name="android:typeface">sans</item>
+    <style name="main_titles_font">
+        <item name="android:textSize">@dimen/text_massive</item>
         <item name="android:alpha">0.7</item>
         <item name="android:textColor">#5F5F5F</item>
     </style>
 
-    <style name="mainSubtitlesFont">
-        <item name="android:textSize">35sp</item>
-        <item name="android:typeface">sans</item>
+    <style name="main_subtitles_font">
+        <item name="android:textSize">@dimen/text_large</item>
         <item name="android:alpha">0.7</item>
         <item name="android:textColor">#5F5F5F</item>
     </style>
 
-    <style name="mainFieldsFont">
-        <item name="android:textSize">25sp</item>
+    <style name="main_fields_font">
+        <item name="android:textSize">@dimen/text_medium</item>
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="mainTextsFont">
-        <item name="android:textSize">25sp</item>
-        <item name="android:typeface">sans</item>
+    <style name="main_texts_tont">
+        <item name="android:textSize">@dimen/text_medium</item>
         <item name="android:textColor">#5F5F5F</item>
         <item name="android:alpha">0.8</item>
     </style>
-
 
 </resources>

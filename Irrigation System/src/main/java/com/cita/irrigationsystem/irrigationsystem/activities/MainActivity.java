@@ -1,52 +1,62 @@
 package com.cita.irrigationsystem.irrigationsystem.activities;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-import com.cita.irrigationsystem.irrigationsystem.JsonSpiceService;
 import com.cita.irrigationsystem.irrigationsystem.R;
-import com.cita.irrigationsystem.irrigationsystem.StartFragment;
-import com.cita.irrigationsystem.irrigationsystem.WeatherInformationFragment;
-import com.cita.irrigationsystem.irrigationsystem.lists.CropList;
-import com.octo.android.robospice.SpiceManager;
-import com.octo.android.robospice.persistence.exception.SpiceException;
-import com.octo.android.robospice.request.listener.RequestListener;
+import com.cita.irrigationsystem.irrigationsystem.fragments.AreasFragment;
+import com.cita.irrigationsystem.irrigationsystem.fragments.StartFragment;
+import com.cita.irrigationsystem.irrigationsystem.fragments.WeatherInformationFragment;
 
 
 public class MainActivity extends Activity implements
-        StartFragment.OnFragmentInteractionListener, WeatherInformationFragment.OnFragmentInteractionListener {
+        StartFragment.OnFragmentInteractionListener, WeatherInformationFragment.OnFragmentInteractionListener,
+        AreasFragment.OnFragmentInteractionListener {
 
-    protected SpiceManager spiceManager = new SpiceManager(JsonSpiceService.class);
+    private String[] menu = {"Campos", "Válvulas", "Áreas", "Sensores"};
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+
+    FragmentManager mainFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spiceManager.start(this);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.drawer_list);
+
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_text_view, R.id.drawer_tv, menu));
+        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
     }
 
     @Override
     protected void onPause() {
-        spiceManager.shouldStop();
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        spiceManager.shouldStop();
         super.onStop();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
         return true;
     }
 
@@ -56,9 +66,7 @@ public class MainActivity extends Activity implements
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //TODO: SWITCH FOR MENU ITEMS PRESSED
         return super.onOptionsItemSelected(item);
     }
 
@@ -72,24 +80,27 @@ public class MainActivity extends Activity implements
 
     }
 
-    private void performRequest(String areas){
-        MainActivity.this.setProgressBarIndeterminateVisibility(true);
-
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
     }
 
-    /**
-     * Inner class for updating ui with data received from the API.
-     */
-    public class CropListRequestListener implements RequestListener<CropList> {
-        @Override
-        public void onRequestFailure(SpiceException e) {
-            Toast.makeText(MainActivity.this, "Failed to fetch crops", Toast.LENGTH_LONG).show();
-        }
 
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
-        public void onRequestSuccess(CropList cropInformations) {
-            Toast.makeText(MainActivity.this, "Succeded to fetch crops", Toast.LENGTH_LONG).show();
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            Log.i("Button pressed:", "" + i);
+
+            switch (i){
+                case 0:
+                    AreasFragment areasFragment = new AreasFragment();
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.main_container, areasFragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                    break;
+                default: break;
+            }
         }
     }
 }

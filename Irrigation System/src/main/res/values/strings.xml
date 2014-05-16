@@ -8,31 +8,40 @@
     <string name="description">Descripción:</string>
     <string name="localization">Localización:</string>
     <string name="state">Estado:</string>
-    <string name="action_settings">Settings</string>
-    <string name="stateOnText">Activado</string>
-    <string name="stateOffText">Desactivado</string>
+    <string name="state_on_text">Activado</string>
+    <string name="state_off_text">Desactivado</string>
     <string name="humidity">Humedad</string>
     <string name="temperature">Temperatura</string>
     <string name="windSpeed">Velocidad del Viento</string>
-    <string name="solarRadiation">Radiación Solar</string>
+    <string name="solar_radiation">Radiación Solar</string>
+    <string name="evt">Evapotranspiración</string>
+
+    <!-- Menu Strings -->
+    <string name="option_fields">Campos</string>
+    <string name="option_valves">Válvulas</string>
+    <string name="option_areas">Áreas</string>
+    <string name="option_sensors">Sensores</string>
 
     <!-- Main Activity -->
     <!-- Start Fragment -->
-    <string name="homeTV">Inicio</string>
-    <string name="areaNameText">Area_Name</string>
-    <string name="areaDescText">Area_Description</string>
-    <string name="areaLocText">Area_Localization</string>
-    <string name="seeOnMap">Ver en mapa</string>
+    <string name="home_tv">Inicio</string>
+    <string name="area_name_text">Area_Name</string>
+    <string name="area_desc_text">Area_Description</string>
+    <string name="area_loc_text">Area_Localization</string>
+    <string name="see_on_map">Ver en mapa</string>
     <!-- Climate Info Fragment -->
-    <string name="climaticInfoTV">Información Climática</string>
-    <string name="climaticInfoNameText">Climatic_Info_Name</string>
-    <string name="humidityLevel">--.- %</string>
-    <string name="temperatureLevel">-- º</string>
-    <string name="windSpeedLevel">-- Km/h</string>
-    <string name="solarRadiationLevel">--</string>
+    <string name="climatic_info_tv">Información Climática</string>
+    <string name="climatic_info_name_text">Climatic_Info_Name</string>
+    <string name="humidity_level">--.- %</string>
+    <string name="temperature_level">-- º</string>
+    <string name="wind_speed_level">-- Km/h</string>
+    <string name="solar_radiation_level">--</string>
+    <!-- Crop Info Fragment -->
+    <string name="field_name">field_name</string>
+    <string name="field_desc">field_description</string>
 
-    <!-- Crop Activity -->
-    <string name="title_activity_crop">Crops</string>
+    <!-- Areas Fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_areas_activitiy">AreasActivitiy</string>
 
 </resources>

@@ -72,13 +72,13 @@ public class DummyContent {
 //getString(R.string.humidity),
 //    getString(R.string.temperature),
 //    getString(R.string.windSpeed),
-//    getString(R.string.solarRadiation)
+//    getString(R.string.solar_radiation)
 //};
 //String[] values = {
-//        getString(R.string.humidityLevel),
-//        getString(R.string.temperatureLevel),
-//        getString(R.string.windSpeedLevel),
-//        getString(R.string.solarRadiationLevel)
+//        getString(R.string.humidity_level),
+//        getString(R.string.temperature_level),
+//        getString(R.string.windSpeed_level),
+//        getString(R.string.solar_radiation_level)
 //        };
 //        int[] imgIds = {
 //        R.drawable.img_humidity,

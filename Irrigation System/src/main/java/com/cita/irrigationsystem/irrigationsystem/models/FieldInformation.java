@@ -1,14 +1,21 @@
 package com.cita.irrigationsystem.irrigationsystem.models;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by mgradob on 4/3/14.
  */
 public class FieldInformation {
 
+    @SerializedName("field_id")
     private int field_id;
+    @SerializedName("field_name")
     private String field_name;
+    @SerializedName("field_description")
     private String field_desc;
+    @SerializedName("field_latitude")
     private float field_lat;
+    @SerializedName("field_longitude")
     private float field_long;
 
     public FieldInformation(int id, String name, String desc, float lat, float lng) {

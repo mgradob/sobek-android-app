@@ -2,10 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingTop="15dp"
-    android:paddingBottom="25dp"
-    tools:context="com.cita.irrigationsystem.irrigationsystem.StartFragment">
+    tools:context="com.cita.irrigationsystem.irrigationsystem.fragments.StartFragment">
 
     <LinearLayout
         android:id="@+id/startLL"
@@ -16,8 +13,8 @@
             android:id="@+id/startTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/homeTV"
-            android:textAppearance="@style/mainTitlesFont"/>
+            android:text="@string/home_tv"
+            android:textAppearance="@style/main_titles_font"/>
 
     </LinearLayout>
 
@@ -50,15 +47,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
-                android:textAppearance="@style/mainFieldsFont"
+                android:textAppearance="@style/main_fields_font"
                 android:layout_below="@+id/startTV"/>
 
             <TextView
                 android:id="@+id/nameTextTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/areaNameText"
-                android:textAppearance="@style/mainTextsFont"
+                android:text="@string/area_name_text"
+                android:textAppearance="@style/main_texts_tont"
                 android:layout_below="@+id/startTV"
                 android:layout_toRightOf="@+id/nameTV"
                 android:paddingLeft="10dp"/>
@@ -68,15 +65,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
-                android:textAppearance="@style/mainFieldsFont"
+                android:textAppearance="@style/main_fields_font"
                 android:layout_below="@id/nameTV"/>
 
             <TextView
                 android:id="@+id/descTextTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/areaDescText"
-                android:textAppearance="@style/mainTextsFont"
+                android:text="@string/area_desc_text"
+                android:textAppearance="@style/main_texts_tont"
                 android:layout_toEndOf="@id/descTV"
                 android:layout_below="@+id/nameTextTV"
                 android:layout_toRightOf="@+id/descTV"
@@ -87,15 +84,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/localization"
-                android:textAppearance="@style/mainFieldsFont"
+                android:textAppearance="@style/main_fields_font"
                 android:layout_below="@id/descTV"/>
 
             <TextView
                 android:id="@+id/locTextTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/areaLocText"
-                android:textAppearance="@style/mainTextsFont"
+                android:text="@string/area_loc_text"
+                android:textAppearance="@style/main_texts_tont"
                 android:layout_toEndOf="@id/descTV"
                 android:layout_below="@+id/descTextTV"
                 android:layout_toRightOf="@+id/locTV"
@@ -104,7 +101,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/seeOnMap"
+                android:text="@string/see_on_map"
                 android:textAlignment="center"
                 android:layout_below="@id/locTV"
                 android:layout_marginTop="20dp"

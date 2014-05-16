@@ -1,4 +1,4 @@
-package com.cita.irrigationsystem.irrigationsystem;
+package com.cita.irrigationsystem.irrigationsystem.fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -10,8 +10,10 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import com.cita.irrigationsystem.irrigationsystem.R;
 import com.cita.irrigationsystem.irrigationsystem.adapters.WeatherInformationAdapter;
 import com.cita.irrigationsystem.irrigationsystem.dummy.DummyContent;
+
 
 /**
  * A fragment representing a list of Items.
@@ -19,7 +21,7 @@ import com.cita.irrigationsystem.irrigationsystem.dummy.DummyContent;
  * Large screen devices (such as tablets) are supported by replacing the ListView
  * with a GridView.
  * <p/>
- * Activities containing this fragment MUST implement the {@link Callbacks}
+ * Activities containing this fragment MUST implement the
  * interface.
  */
 public class WeatherInformationFragment extends Fragment implements AbsListView.OnItemClickListener {
@@ -147,5 +149,4 @@ public class WeatherInformationFragment extends Fragment implements AbsListView.
         // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
     }
-
 }

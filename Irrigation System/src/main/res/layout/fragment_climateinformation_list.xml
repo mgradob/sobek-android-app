@@ -3,29 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cita.irrigationsystem.irrigationsystem.WeatherInformationFragment">
+    tools:context="com.cita.irrigationsystem.irrigationsystem.fragments.WeatherInformationFragment">
 
     <TextView
         android:id="@+id/climaticInfoTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/climaticInfoTV"
-        android:textAppearance="@style/mainSubtitlesFont" />
+        android:text="@string/climatic_info_tv"
+        android:textAppearance="@style/main_subtitles_font" />
 
     <TextView
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
-        android:textAppearance="@style/mainFieldsFont"
+        android:textAppearance="@style/main_fields_font"
         android:layout_below="@+id/climaticInfoTV" />
 
     <TextView
         android:id="@+id/nameTextTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/climaticInfoNameText"
-        android:textAppearance="@style/mainTextsFont"
+        android:text="@string/climatic_info_name_text"
+        android:textAppearance="@style/main_texts_tont"
         android:layout_below="@+id/climaticInfoTV"
         android:layout_toEndOf="@id/nameTV"
         android:paddingLeft="10dp" />
@@ -35,15 +35,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/state"
-        android:textAppearance="@style/mainFieldsFont"
+        android:textAppearance="@style/main_fields_font"
         android:layout_below="@+id/nameTV" />
 
     <TextView
         android:id="@+id/stateTextTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/stateOffText"
-        android:textAppearance="@style/mainTextsFont"
+        android:text="@string/state_off_text"
+        android:textAppearance="@style/main_texts_tont"
         android:layout_below="@+id/nameTextTV"
         android:layout_toEndOf="@id/stateTV"
         android:paddingLeft="10dp" />

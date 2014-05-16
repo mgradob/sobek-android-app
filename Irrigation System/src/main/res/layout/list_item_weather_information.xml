@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
-        android:textAppearance="@style/mainTextsFont"/>
+        android:textAppearance="@style/main_texts_tont"/>
 
     <TextView
         android:id="@+id/weather_title"
@@ -24,6 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/weather_value"
         android:layout_centerHorizontal="true"
-        android:textAppearance="@style/mainFieldsFont"/>
+        android:textAppearance="@style/main_fields_font"/>
 
 </RelativeLayout>
